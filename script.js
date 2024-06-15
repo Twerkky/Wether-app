@@ -100,26 +100,26 @@ document.addEventListener('DOMContentLoaded', () => {
         let backgroundImage;
         switch (weatherCondition.toLowerCase()) {
             case 'clear':
-                backgroundImage = 'url("/weather app/background/day.jpg")';
+                backgroundImage = 'url("/background/day.jpg")';
                 break;
             case 'clouds':
-                backgroundImage = 'url("/weather app/background/clouds.jpg")';
+                backgroundImage = 'url("/background/clouds.jpg")';
                 break;
             case 'rain':
-                backgroundImage = 'url("/weather app/background/rain.jpg")';
+                backgroundImage = 'url("/background/rain.jpg")';
                 break;
             case 'snow':
-                backgroundImage = 'url("/weather app/background/snow.jpg")';
+                backgroundImage = 'url("/background/snow.jpg")';
                 break;
             case 'thunderstorm':
-                backgroundImage = 'url("/weather app/background/thunder.jpg")';
+                backgroundImage = 'url("/background/thunder.jpg")';
                 break;
             case 'mist':
             case 'fog':
-                backgroundImage = 'url("/weather app/background/fog.jpg")';
+                backgroundImage = 'url("/background/fog.jpg")';
                 break;
             default:
-                backgroundImage = 'url("/weather app/background/default.jpg")';
+                backgroundImage = 'url("/background/default.jpg")';
                 break;
         }
         document.body.style.backgroundImage = backgroundImage;
