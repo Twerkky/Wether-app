@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80vw;
+            max-width: 1200px;
+            backdrop-filter: blur(10px);
+            background: rgba(45, 45, 45, 0.5);
+            border-radius: 20px;
+            padding: 20px;
+            
+        }
+        #searchContainer {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        #cityName {
+            margin-right: 10px;
+        }
+        #mainCardContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: auto;
+        }
+        .mainCard, .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        .mainCard {
+            width: 400px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .mainCard img {
+            width: 150px;
+            height: 150px;
+        }
+        #weatherContainer {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px 0;
+            width: 100%;
+            justify-content: center;
+        }
+        .card {
+            min-width: 140px;
+            margin: 0 10px;
+        }
+        .card img {
+            width: 80px;
+            height: 80px;
+        }
+        p{
+            color: rgb(251, 250, 248);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="searchContainer">
+            <input type="text" id="cityName" placeholder="Enter city name">
+            <button id="fetchWeather">Fetch Weather</button>
+        </div>
+        <div id="mainCardContainer" class="mainCard">
+            <template id="mainWeatherCard">
+                <div>
+                    <img src="{{imgWeather}}" alt="Weather Icon">
+                    <p id="cityMain">{{city}}</p>
+                    <p id="tempMain">{{temperature}}C</p>
+                    <p id="dayMain">{{day}}</p>
+                    <p id="dateMain">{{date}}</p>
+                </div>
+            </template>
+        </div>
+        <div id="weatherContainer">
+            <template id="weatherCard">
+                <div class="card">
+                    <p>{{day}}</p>
+                    <img src="{{imgWeather}}" alt="Weather Icon">
+                    <p>{{temperature}}C</p>
+                </div>
+            </template>
+        </div>
+    </div>
+    <script src="/mustache.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
