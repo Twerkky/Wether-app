@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let outputMainCard = document.querySelector('#mainCardContainer');
 
     const apiKey = '11caeb27e64f43aeaab4878827b4f950';
-    let cityUrl = `http://api.openweathermap.org/geo/1.0/zip?zip=E14,GB&appid=${apiKey}`;
+    let cityUrl = `https://api.openweathermap.org/geo/1.0/zip?zip=E14,GB&appid=${apiKey}`;
 
     class FetchService {
         constructor(apiUrl) {
