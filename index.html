@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weather</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <style>
-        body {
+       <style>
+               body {
             background-size: cover;
             background-position: center;
             color: white;
@@ -28,7 +28,6 @@
             background: rgba(45, 45, 45, 0.5);
             border-radius: 20px;
             padding: 20px;
-            
         }
         #searchContainer {
             display: flex;
@@ -52,36 +51,90 @@
             text-align: center;
         }
         .mainCard {
-            width: 400px;
-            height: 400px;
+            margin: auto 0;
+            width: 300px;
+            height: 300px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            
         }
         .mainCard img {
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
         }
         #weatherContainer {
             display: flex;
             overflow-x: auto;
             padding: 10px 0;
+            margin-top: auto;
             width: 100%;
-            justify-content: center;
+            justify-content: flex-start;
+            scroll-snap-type: x mandatory;
         }
         .card {
             min-width: 140px;
             margin: 0 10px;
+            scroll-snap-align: start;
         }
         .card img {
             width: 80px;
             height: 80px;
         }
-        p{
+        p {
             color: rgb(251, 250, 248);
+        }
+        @media (max-width: 768px) {
             
+            #searchContainer {
+                flex-direction: column;
+                align-items: center;
+            }
+            .container {
+                height: 100%;
+                margin-top: 15px;
+            }
+            #cityName {
+                margin-right: 0;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+            #fetchWeather {
+                width: 100%;
+            }
+            #mainCardContainer {
+                margin-bottom: 20px;
+                width: 100%;
+                align-items: center;
+            }
+            .mainCard {
+                width: 100%;
+                max-width: 300px;
+            }
+            #weatherContainer {
+                justify-content: center;
+                flex-flow: column wrap;
+                margin-top: auto;
+                gap: 15px;
+                
+            }
+            .card {
+                min-width: 120px;
+                padding: 5px;
+            }
+            .mainCard img {
+                width: 80px;
+                height: 80px;
+            }
+            .card img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        @media (max-width: 400px) {
+            body {
+                height: 100%;
+            }
         }
     </style>
 </head>
