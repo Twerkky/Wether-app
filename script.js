@@ -180,12 +180,3 @@ document.addEventListener('DOMContentLoaded', () => {
         await fetchAndRenderWeather();
     });
 });
-
-
-
-
-
-
-
-
-
